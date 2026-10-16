@@ -1,0 +1,12 @@
+name: VersatiaExample-DI-OptionalPlugins
+version: '${version}'
+main: com.github.marcoral.versatia.example.optionalplugins.RewardsPlugin
+api-version: '1.21'
+author: Versatia
+description: Beans conditional on an optional plugin, Vault, with a fallback when it is missing.
+# Kotlin classes come from VersatiaCore's class loader; do not list kotlin-stdlib here
+depend:
+  - VersatiaCore
+# Enabled before this plugin when installed, so @ConditionalOnPlugin("Vault") sees it
+softdepend:
+  - Vault
