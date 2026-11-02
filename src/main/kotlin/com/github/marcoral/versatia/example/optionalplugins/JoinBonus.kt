@@ -4,7 +4,8 @@ import com.github.marcoral.versatia.Phase
 import com.github.marcoral.versatia.di.LocalBean
 import com.github.marcoral.versatia.lifecycle.AutoInvoke
 import java.util.logging.Logger
-import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.Component.text
+import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
@@ -24,7 +25,7 @@ class JoinBonus(private val payments: Payments, private val logger: Logger) : Li
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
         payments.deposit(event.player, BONUS)
-        event.player.sendMessage(Component.text("Join bonus: $BONUS, balance ${payments.balance(event.player)}"))
+        event.player.sendMessage(text("Join bonus: ").append(text(BONUS, NamedTextColor.AQUA)).append(text(", balance ")).append(text(payments.balance(event.player), NamedTextColor.AQUA)))
         logger.info("${event.player.name} received the join bonus, balance ${payments.balance(event.player)}")
     }
 
