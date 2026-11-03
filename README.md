@@ -2,9 +2,9 @@
 
 An integration with an optional plugin: a bean conditional on Vault with `@ConditionalOnPlugin` and `@Primary`, a fallback used when Vault is missing, and the condition written once as an annotation of your own.
 
-Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Optional plugins](https://versatiaframework.github.io/VersatiaDocs/docs/optional-plugins).
+Part of the [Versatia examples](https://github.com/VersatiaFramework/VersatiaExamples); documentation: [Optional plugins](https://versatia.dev/docs/optional-plugins).
 
-**Start with** [`Payments.kt`](src/main/kotlin/com/github/marcoral/versatia/example/optionalplugins/Payments.kt) and [`VaultPayments.kt`](src/main/kotlin/com/github/marcoral/versatia/example/optionalplugins/VaultPayments.kt), then [`JoinBonus.kt`](src/main/kotlin/com/github/marcoral/versatia/example/optionalplugins/JoinBonus.kt), which uses them, and [`NeedsVault.kt`](src/main/kotlin/com/github/marcoral/versatia/example/optionalplugins/NeedsVault.kt).
+**Start with** [`Payments.kt`](src/main/kotlin/dev/versatia/example/optionalplugins/Payments.kt) and [`VaultPayments.kt`](src/main/kotlin/dev/versatia/example/optionalplugins/VaultPayments.kt), then [`JoinBonus.kt`](src/main/kotlin/dev/versatia/example/optionalplugins/JoinBonus.kt), which uses them, and [`NeedsVault.kt`](src/main/kotlin/dev/versatia/example/optionalplugins/NeedsVault.kt).
 
 ## What the log shows
 
@@ -49,7 +49,7 @@ When a player joins, either way:
 
 Requires JDK 21 and VersatiaAPI in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
-[Building the framework](https://versatiaframework.github.io/VersatiaDocs/docs/contributing/building));
+[Building the framework](https://versatia.dev/docs/contributing/building));
 running it requires a Paper 1.21.4 server with VersatiaCore installed, and, to see the Vault side,
 [Vault](https://github.com/MilkBowl/Vault) with an economy plugin. The build compiles against
 VaultAPI from [JitPack](https://jitpack.io) (`compileOnly`, never bundled).

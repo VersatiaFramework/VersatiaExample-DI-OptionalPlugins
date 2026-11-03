@@ -1,6 +1,6 @@
-package com.github.marcoral.versatia.example.optionalplugins
+package dev.versatia.example.optionalplugins
 
-import com.github.marcoral.versatia.di.LocalBean
+import dev.versatia.di.LocalBean
 import org.bukkit.OfflinePlayer
 import java.util.UUID
 

@@ -1,8 +1,8 @@
-package com.github.marcoral.versatia.example.optionalplugins
+package dev.versatia.example.optionalplugins
 
-import com.github.marcoral.versatia.Phase
-import com.github.marcoral.versatia.di.LocalBean
-import com.github.marcoral.versatia.lifecycle.AutoInvoke
+import dev.versatia.Phase
+import dev.versatia.di.LocalBean
+import dev.versatia.lifecycle.AutoInvoke
 import java.util.logging.Logger
 import net.kyori.adventure.text.Component.text
 import net.kyori.adventure.text.format.NamedTextColor

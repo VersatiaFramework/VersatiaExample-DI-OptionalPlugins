@@ -1,10 +1,10 @@
-package com.github.marcoral.versatia.example.optionalplugins
+package dev.versatia.example.optionalplugins
 
-import com.github.marcoral.versatia.ConditionalOnPlugin
-import com.github.marcoral.versatia.VersatiaEngine
-import com.github.marcoral.versatia.di.LocalBean
-import com.github.marcoral.versatia.di.Primary
-import com.github.marcoral.versatia.loadService
+import dev.versatia.ConditionalOnPlugin
+import dev.versatia.VersatiaEngine
+import dev.versatia.di.LocalBean
+import dev.versatia.di.Primary
+import dev.versatia.loadService
 import net.milkbowl.vault.economy.Economy
 import org.bukkit.OfflinePlayer
 
