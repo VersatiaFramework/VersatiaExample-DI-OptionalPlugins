@@ -47,10 +47,10 @@ When a player joins, either way:
 
 ## Building
 
-Requires JDK 21 and VersatiaAPI in your
+Requires JDK 25 and VersatiaAPI in your
 local Maven repository (`./gradlew publishToMavenLocal` in each checkout; see
 [Building the framework](https://versatia.dev/docs/contributing/building));
-running it requires a Paper 1.21.4 server with VersatiaCore installed, and, to see the Vault side,
+running it requires a Paper 26.3 server with VersatiaCore installed, and, to see the Vault side,
 [Vault](https://github.com/MilkBowl/Vault) with an economy plugin. The build compiles against
 VaultAPI from [JitPack](https://jitpack.io) (`compileOnly`, never bundled).
 
