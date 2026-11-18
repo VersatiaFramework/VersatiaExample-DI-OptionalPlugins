@@ -3,16 +3,16 @@ package dev.versatia.example.optionalplugins
 import dev.versatia.Phase
 import dev.versatia.di.LocalBean
 import dev.versatia.lifecycle.AutoInvoke
+import dev.versatia.text.Text
+import dev.versatia.text.arg
 import java.util.logging.Logger
-import net.kyori.adventure.text.Component.text
-import net.kyori.adventure.text.format.NamedTextColor
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 
 /** Takes `Payments` without knowing which one it gets: `VaultPayments` with Vault, `MemoryPayments` without. */
 @LocalBean
-class JoinBonus(private val payments: Payments, private val logger: Logger) : Listener {
+class JoinBonus(private val payments: Payments, private val logger: Logger, private val text: Text) : Listener {
     init {
         logger.info("JoinBonus pays through ${payments.javaClass.simpleName}: ${payments.description}")
     }
@@ -25,7 +25,7 @@ class JoinBonus(private val payments: Payments, private val logger: Logger) : Li
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
         payments.deposit(event.player, BONUS)
-        event.player.sendMessage(text("Join bonus: ").append(text(BONUS, NamedTextColor.AQUA)).append(text(", balance ")).append(text(payments.balance(event.player), NamedTextColor.AQUA)))
+        event.player.sendMessage(text.parse("<positive>Join bonus: {bonus}, balance {balance}", arg("bonus", BONUS), arg("balance", payments.balance(event.player))))
         logger.info("${event.player.name} received the join bonus, balance ${payments.balance(event.player)}")
     }
 
